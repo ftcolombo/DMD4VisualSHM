@@ -6,71 +6,69 @@ addpath('../Data')
 
 %% Analysing the mean eigenvectors for all damage scenarios
 
-np = [4 3 2 1]; % ordering of the modes according to the eigs
-
 load('mean_mode_00_00_00_run1_noise.mat')
-modes1 = mean_modes(:,np);
-nh1 = nheight;
-nw1 = nwidth;
+modesA = mean_modes;
+nhA = nheight;
+nwA = nwidth;
 
 load('mean_mode_05_00_00_run1_noise.mat')
-modes2 = mean_modes(:,np);
-nh2 = nheight;
-nw2 = nwidth;
+modesB = mean_modes;
+nhB = nheight;
+nwB = nwidth;
 
 load('mean_mode_10_00_00_run1_noise.mat')
-modes3 = mean_modes(:,np);
-nh3 = nheight;
-nw3 = nwidth;
+modesC = mean_modes;
+nhC = nheight;
+nwC = nwidth;
 
 load('mean_mode_13_00_00_run1_noise.mat')
-modes4 = mean_modes(:,np);
-nh4 = nheight;
-nw4 = nwidth;
+modesD = mean_modes;
+nhD = nheight;
+nwD = nwidth;
 
 load('mean_mode_13_05_00_run2_noise.mat')
-modes5 = mean_modes(:,np);
-nh5 = nheight;
-nw5 = nwidth;
+modesE = mean_modes;
+nhE = nheight;
+nwE = nwidth;
 
 load('mean_mode_13_05_05_run2_noise.mat')
-modes6 = mean_modes(:,np);
-nh6 = nheight;
-nw6 = nwidth;
+modesF = mean_modes;
+nhF = nheight;
+nwF = nwidth;
 
 load('mean_mode_13_10_05_run2_noise.mat')
-modes7 = mean_modes(:,np);
-nh7 = nheight;
-nw7 = nwidth;
+modesG = mean_modes;
+nhG = nheight;
+nwG = nwidth;
 
 load('mean_mode_13_10_11_run2_noise.mat')
-modes8 = mean_modes(:,np);
-nh8 = nheight;
-nw8 = nwidth;
+modesH = mean_modes;
+nhH = nheight;
+nwH = nwidth;
 
 
 %%
 i = 1;
 
-IPhi01 = mat2gray(reshape(real(modes1(:,i)), nh1,nw1));
-IPhi02 = mat2gray(reshape(real(modes2(:,i)), nh2,nw2));
-IPhi03 = mat2gray(reshape(real(modes3(:,i)), nh3,nw3));
-IPhi04 = mat2gray(reshape(real(modes4(:,i)), nh4,nw4));
-IPhi05 = mat2gray(reshape(real(modes5(:,i)), nh5,nw5));
-IPhi06 = mat2gray(reshape(real(modes6(:,i)), nh6,nw6));
-IPhi07 = mat2gray(reshape(real(modes7(:,i)), nh7,nw7));
-IPhi08 = mat2gray(reshape(real(modes8(:,i)), nh8,nw8));
+IPhi01 = mat2gray(reshape(real(modesA(:,i)), nhA,nwA));
+IPhi02 = mat2gray(reshape(real(modesB(:,i)), nhB,nwB));
+IPhi03 = mat2gray(reshape(real(modesC(:,i)), nhC,nwC));
+IPhi04 = mat2gray(reshape(real(modesD(:,i)), nhD,nwD));
+IPhi05 = mat2gray(reshape(real(modesE(:,i)), nhE,nwE));
+IPhi06 = mat2gray(reshape(real(modesF(:,i)), nhF,nwF));
+IPhi07 = mat2gray(reshape(real(modesG(:,i)), nhG,nwG));
+IPhi08 = mat2gray(reshape(real(modesH(:,i)), nhH,nwH));
 
 i = 2;
 
-IPhi11 = mat2gray(reshape(real(modes1(:,i)), nh1,nw1));
-IPhi12 = mat2gray(reshape(real(modes2(:,i)), nh2,nw2));
-IPhi13 = mat2gray(reshape(real(modes3(:,i)), nh3,nw3));
-IPhi14 = mat2gray(reshape(real(modes4(:,i)), nh4,nw4));
-IPhi15 = mat2gray(reshape(real(modes5(:,i)), nh5,nw5));
-IPhi16 = mat2gray(reshape(real(modes6(:,i)), nh6,nw6));
-IPhi17 = mat2gray(reshape(real(modes7(:,i)), nh7,nw7));
-IPhi18 = mat2gray(reshape(real(modes8(:,i)), nh8,nw8));
+IPhi11 = mat2gray(reshape(real(modesA(:,i)), nhA,nwA));
+IPhi12 = mat2gray(reshape(real(modesB(:,i)), nhB,nwB));
+IPhi13 = mat2gray(reshape(real(modesC(:,i)), nhC,nwC));
+IPhi14 = mat2gray(reshape(real(modesD(:,i)), nhD,nwD));
+IPhi15 = mat2gray(reshape(real(modesE(:,i)), nhE,nwE));
+IPhi16 = mat2gray(reshape(real(modesF(:,i)), nhF,nwF));
+IPhi17 = mat2gray(reshape(real(modesG(:,i)), nhG,nwG));
+IPhi18 = mat2gray(reshape(real(modesH(:,i)), nhH,nwH));
 
 A = IPhi11;
 B = IPhi01;
