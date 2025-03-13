@@ -15,15 +15,15 @@ To evaluate the results illustrated in this section, you can compile the codes i
 
 With DMD, we decomposed the free response of a clamped-free beam described by images of the motion into dynamic modes, which are coherent to the modes shapes seen in Structural Dynamics:
 
-https://github.com/user-attachments/assets/6c087826-458d-4fa8-871b-8d27ef7585d5
+https://github.com/user-attachments/assets/7234b638-388f-42f6-bd1b-f725c32bda09
 
 Moreover, DMD can be used to reconstruct the data in the synthetic videos used in the training. Below, we see the reconstructed motions of a beam with no damping:  
 
-https://github.com/user-attachments/assets/771881da-3883-4fd5-9c13-aa8b53d6b2ac
+https://github.com/user-attachments/assets/a23d96bd-4068-4cdc-8560-0c0d6de4fe44
 
 and with 4% of proportional damping in all modes:
 
-https://github.com/user-attachments/assets/b1dd6070-517f-4b39-8be1-594def039161
+https://github.com/user-attachments/assets/333163e1-f7dd-4050-b068-ac7579431ae1
 
 # Experimental analysis of the motion of a clamped-free beam
 
@@ -42,6 +42,8 @@ Since DMD estimated conservative eigenvalues with high damping on this noisy dat
 
 Below, we see the motion of the beam in the videos reconstructed by DMD and optDMD (we used the eigenvalues estimated by DMD with time embeddings as the initial guess needed for optDMD):
 
+https://github.com/user-attachments/assets/6e7fd2fc-7965-42e9-9710-640ec8a67a6c
+
 # Diagnostic tool for SHM
 
 To evaluate the results illustrated in this section, you can compile the codes in the Folder *DiagnosticTool* in the following order:
@@ -49,6 +51,8 @@ To evaluate the results illustrated in this section, you can compile the codes i
 2. optdmd4diagnostics_scenarioA.m
 3. diagnostics_aval_eigs_splane.m
 4. diagnostics_aval_modes.m
+
+https://github.com/user-attachments/assets/5c1815ed-0912-476a-a225-27d1856900b1
 
 # References
 
