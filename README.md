@@ -1,5 +1,3 @@
-Code developed for the paper "Damage Identification in Structures Using Dynamic Mode Decomposition for Vibration Analysis of Low-Resolution Videos"
-
 # Introduction
 
 In this work, we investigated how the Dynamic Mode Decomposition (DMD), a data-driven technique, can be interpreted in a solid mechanics problem and used to identify damage in an application of Structural Health Monitoring (SHM). The results were divided into three parts, corresponding to the numerical and experimental analysis of the motion of a beam and the implementation of a diagnostic tool.
@@ -65,7 +63,7 @@ https://github.com/user-attachments/assets/5c1815ed-0912-476a-a225-27d1856900b1
 
 xx
 
-This study was financed, in part, by the Sao Paulo Research Foundation (FAPESP), Brazil. Process Number #2022/16271-2.
+This study was financed, in part, by the São Paulo Research Foundation (FAPESP), Brazil. Process Number #2022/16271-2.
 
 # References
 
