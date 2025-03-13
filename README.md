@@ -1,4 +1,4 @@
-Code implemented by F.T. Colombo for the article *Damage Identification in Structures Using Dynamic Mode Decomposition for Vibration Analysis of Low-Resolution Videos*.
+Code developed for the paper "Damage Identification in Structures Using Dynamic Mode Decomposition for Vibration Analysis of Low-Resolution Videos"
 
 # Introduction
 
