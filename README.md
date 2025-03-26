@@ -1,17 +1,17 @@
 # Introduction
 
-In this work, we investigated how the Dynamic Mode Decomposition (DMD), a data-driven technique, can be interpreted in a solid mechanics problem and used to identify damage in an application of Structural Health Monitoring (SHM). The results were divided into three parts, corresponding to the numerical and experimental analysis of the motion of a beam and the implementation of a diagnostic tool.
+In this work, we investigated how Dynamic Mode Decomposition (DMD), a data-driven technique, can be interpreted in a solid mechanics problem and used to identify damage in a Structural Health Monitoring (SHM) application. The results were divided into three parts, corresponding to the numerical and experimental analysis of the beam motion and the implementation of a diagnostic tool.
 
 # Numerical analysis of the motion of a clamped-free beam
 
-The motion of a clamped-free beam was simulated according to the Euler-Bernoulli beam theory and used to create two datasets: one based on the displacement of the nodes and another based on the motion captured by a video record.
+We simulated the motion of a clamped-free beam using Euler-Bernoulli theory to create two datasets: one based on the displacement over time of the nodes and another based on the motion captured by images of the beam.
 
 To evaluate the results illustrated in this section, you can compile the codes in the Folder *NumericalAnalysis* in the following order:
 1. analysisDMDonNodalDispl.m
 2. analysisDMDonVideoMotion_undamped.m
 3. analysisDMDonVideoMotion_damped.m
 
-With DMD, we decomposed the free response of a clamped-free beam described by images of the motion into *Image dynamic modes*, which are coherent to the modes shapes in Structural Dynamics:
+By applying DMD to the video record of the beam motion, we decomposed its free response into *Image dynamic modes*, which convey how the beam moves at a specific oscillation frequency and decay/growth rate. These image representations of the motion showed to be coherent to the modes shapes defined in Structural Dynamics for a clamped-free beam:
 
 https://github.com/user-attachments/assets/7234b638-388f-42f6-bd1b-f725c32bda09
 
@@ -26,7 +26,7 @@ https://github.com/user-attachments/assets/333163e1-f7dd-4050-b068-ac7579431ae1
 
 # Experimental analysis of the motion of a clamped-free beam
 
-Video records from the experiment done by Garrido et al.<sup>1</sup> were used to investigate the ability of DMD to work with noisy video of the motion of a flexible beam. This dataset<sup>1</sup> is needed to compile some of the implemented codes.
+A video recording of the experiment done by Garrido et al.<sup>1</sup> containing the free motion of a beam in a healthy condition was used to investigate the ability of DMD to work with a noisy dataset, which is commonly encountered in practice. This dataset described by Garrido et al.<sup>1</sup> is needed to compile some of the implemented codes.
 
 To evaluate the results illustrated in this section, you can compile the codes in the Folder *ExperimentalAnalysis* in the following order:
 1. dmd_number_embeddings_data.m
@@ -37,7 +37,7 @@ To evaluate the results illustrated in this section, you can compile the codes i
 6. expvideo_initial_guess4optdmd.m
 7. expvideo_optdmd.m
 
-Since DMD usually estimates conservative eigenvalues with high damping for noisy data, we also investigated the algorithm *optimized DMD*, proposed by Askham and Kutz<sup>2</sup>. Their MATLAB package optDMD<sup>3</sup> is required to compile some of the implemented codes.
+In addition to the data having significant noise, the beam used in this experiment also had damping, which caused its free motion to decay quickly. Since DMD usually estimates conservative eigenvalues in this case, we also investigated the algorithm *optimized DMD* proposed by Askham and Kutz<sup>2</sup>. Their MATLAB package optDMD<sup>3</sup> is required to compile some of the implemented codes.
 
 Below, we see the motion of the beam in the videos reconstructed by DMD and optDMD (we used the eigenvalues estimated by DMD with time embeddings as the initial guess needed for optDMD):
 
@@ -45,7 +45,7 @@ https://github.com/user-attachments/assets/6e7fd2fc-7965-42e9-9710-640ec8a67a6c
 
 # Diagnostic tool for SHM
 
-The dataset created by by Garrido et al.<sup>1</sup> includes videos of the free response of a beam with different health conditions. With the goal of applying DMD to low-quality images, we corrupted the videos in this dataset to have lower resolution and frame rate and additional Gaussian white noise. 
+The dataset created by Garrido et al.<sup>1</sup> also includes videos of the free response of a beam with several health conditions. Each video record contains the free motion of a beam with cracks in different positions and sizes. With the goal of assessing DMD's ability to work with low-quality images, we corrupted the videos in this dataset to have lower resolution and frame rate and additional Gaussian white noise. 
 
 To evaluate the results illustrated in this section, you can compile the codes in the Folder *DiagnosticTool* in the following order:
 1. initial_modeselection4diagnostics.m
@@ -53,15 +53,17 @@ To evaluate the results illustrated in this section, you can compile the codes i
 3. diagnostics_aval_eigs_splane.m
 4. diagnostics_aval_modes.m
 
-Additionaly, we applied the framework proposed by Sashidhar and Kutz<sup>4</sup> to quantify the uncertainty of the eigenvectors and eigenvalues estimated by DMD.
+In addition to using the optimized version of DMD developed by Askham and Kutz<sup>2</sup>, we applied the framework proposed by Sashidhar and Kutz<sup>4</sup> to quantify the uncertainty of the eigenvectors and eigenvalues estimated.
 
-Below, we see the steps taken to identify the cracks in the beam using the *Image Dynamic Modes* estimated by DMD for each health condition:
+Below, we see the steps taken to identify the cracks in the beam using the mean *Image Dynamic Modes* estimated by DMD for each health condition:
 
 https://github.com/user-attachments/assets/5c1815ed-0912-476a-a225-27d1856900b1
 
 # Citation
 
 xx
+
+# Acknowledgements
 
 This study was financed, in part, by the São Paulo Research Foundation (FAPESP), Brazil. Process Number #2022/16271-2.
 
