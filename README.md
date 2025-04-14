@@ -61,7 +61,22 @@ https://github.com/user-attachments/assets/5c1815ed-0912-476a-a225-27d1856900b1
 
 # Citation
 
-xx
+If you use this repository, please cite the following paper:
+
+Colombo FT, da Silva S, Garrido H, Domizio M. Damage identification in structures using dynamic mode decomposition for vibration analysis of low-resolution videos. Structural Health Monitoring. 2025;0(0). URL [https://doi.org/10.1177/14759217251327555](https://doi.org/10.1177/14759217251327555)
+
+```
+@article{dmd4visualshm,
+  author = {Fernanda Tha\'is Colombo and Samuel da Silva and Hern\'an Garrido and Martin Domizio},
+  title = {Damage identification in structures using dynamic mode decomposition for vibration analysis of low-resolution videos},
+  journal = {Structural Health Monitoring},
+  volume = {0},
+  number = {0},
+  pages = {14759217251327555},
+  year = {0},
+  doi = {10.1177/14759217251327555}
+}
+```
 
 # Acknowledgements
 
