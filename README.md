@@ -80,7 +80,7 @@ Colombo FT, da Silva S, Garrido H, Domizio M. Damage identification in structure
 
 # Acknowledgements
 
-This study was financed, in part, by the São Paulo Research Foundation (FAPESP), Brazil. Process Number #2022/16271-2.
+This study was financed, in part, by the São Paulo Research Foundation (FAPESP), Brazil. Process Number #2022/16271-2. Moreover, "The opinions, hypotheses and conclusions or recommendations expressed in this material are the responsibility of the author(s) and do not necessarily reflect the views of FAPESP".
 
 # References
 
